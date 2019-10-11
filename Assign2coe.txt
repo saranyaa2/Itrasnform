@@ -1,0 +1,371 @@
+DIN34003357+temp@DIN34003357 MINGW64 ~
+$ mkdir Assignments
+
+DIN34003357+temp@DIN34003357 MINGW64 ~
+$ cd Assignments
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments
+$ touch README.txt
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments
+$ git add README.txt
+fatal: not a git repository (or any of the parent directories): .git
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments
+$ git init
+Initialized empty Git repository in C:/Users/temp/Assignments/.git/
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (master)
+$ git add README.txt
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (master)
+$ git commit -m "first commit"
+[master (root-commit) 9a14ffc] first commit
+ Committer: temp <temp@DIN34003357.corp.capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.txt
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (master)
+$ git branch htmlassignments
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (master)
+$ git checkout htmlassignments
+Switched to branch 'htmlassignments'
+M       README.txt
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (htmlassignments)
+$ touch index1.html
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (htmlassignments)
+$ touch index2.html
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (htmlassignments)
+$ git add index1.html
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (htmlassignments)
+$ git add index2.html
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (htmlassignments)
+$ git commit -m "second commit"
+[htmlassignments 2419007] second commit
+ Committer: temp <temp@DIN34003357.corp.capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index1.html
+ create mode 100644 index2.html
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (htmlassignments)
+$ git commit -m "third commit"
+On branch htmlassignments
+Changes not staged for commit:
+        modified:   README.txt
+        modified:   index1.html
+        modified:   index2.html
+
+no changes added to commit
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (htmlassignments)
+$ git checkout Assignments
+error: pathspec 'Assignments' did not match any file(s) known to git
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (htmlassignments)
+$ git checkout master
+error: Your local changes to the following files would be overwritten by checkout:
+        index1.html
+        index2.html
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (htmlassignments)
+$ git add index1.html
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (htmlassignments)
+$ git add index2.html
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (htmlassignments)
+$ git commit -m "fourth commit"
+[htmlassignments e73f173] fourth commit
+ Committer: temp <temp@DIN34003357.corp.capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 22 insertions(+)
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (htmlassignments)
+$ git checkout Assignments
+error: pathspec 'Assignments' did not match any file(s) known to git
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (htmlassignments)
+$ git checkout master
+Switched to branch 'master'
+M       README.txt
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (master)
+$ git commit -m "fifth commit"
+On branch master
+Changes not staged for commit:
+        modified:   README.txt
+
+no changes added to commit
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (master)
+$ git checkout htmlassignments
+Switched to branch 'htmlassignments'
+M       README.txt
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (htmlassignments)
+$ git commit -m "sixth commit"
+On branch htmlassignments
+Changes not staged for commit:
+        modified:   README.txt
+        modified:   index1.html
+        modified:   index2.html
+
+no changes added to commit
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (htmlassignments)
+$ git status
+On branch htmlassignments
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+        modified:   index1.html
+        modified:   index2.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (htmlassignments)
+$ git commit -m "7th commit"
+On branch htmlassignments
+Changes not staged for commit:
+        modified:   README.txt
+        modified:   index1.html
+        modified:   index2.html
+
+no changes added to commit
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (htmlassignments)
+$ git checkout master
+error: Your local changes to the following files would be overwritten by checkout:
+        index1.html
+        index2.html
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (htmlassignments)
+$ git add index1.html
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (htmlassignments)
+$ git add index2.html
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (htmlassignments)
+$ git commit -m "8th commit"
+[htmlassignments fe00244] 8th commit
+ Committer: temp <temp@DIN34003357.corp.capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (htmlassignments)
+$ git checkout master
+Switched to branch 'master'
+M       README.txt
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (master)
+$ git merge htmlassignments
+Updating 9a14ffc..fe00244
+Fast-forward
+ index1.html | 12 ++++++++++++
+ index2.html | 12 ++++++++++++
+ 2 files changed, 24 insertions(+)
+ create mode 100644 index1.html
+ create mode 100644 index2.html
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (master)
+$ ls
+index1.html  index2.html  README.txt
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (master)
+$ git branch -d htmlassignments
+Deleted branch htmlassignments (was fe00244).
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (master)
+$ git branch cssassignments
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (master)
+$ git checkout cssassignments
+Switched to branch 'cssassignments'
+M       README.txt
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (cssassignments)
+$ touch add.css
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (cssassignments)
+$ touch add2.css
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (cssassignments)
+$ git add add.css
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (cssassignments)
+$ git add add2.css
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (cssassignments)
+$ git commit -m "first commit css"
+[cssassignments d769f2b] first commit css
+ Committer: temp <temp@DIN34003357.corp.capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 add.css
+ create mode 100644 add2.css
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (cssassignments)
+$ git commit -m "second commit css"
+On branch cssassignments
+Changes not staged for commit:
+        modified:   README.txt
+        modified:   add.css
+        modified:   add2.css
+
+no changes added to commit
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (cssassignments)
+$ git checkout master
+error: Your local changes to the following files would be overwritten by checkout:
+        add.css
+        add2.css
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (cssassignments)
+$ git add add.css
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (cssassignments)
+$ git add add2.css
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (cssassignments)
+$ git commit -m "third commit css"
+[cssassignments 5d7f297] third commit css
+ Committer: temp <temp@DIN34003357.corp.capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 6 insertions(+)
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (cssassignments)
+$ git checkout master
+Switched to branch 'master'
+M       README.txt
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (master)
+$ git commit -m "fourth commit css"
+On branch master
+Changes not staged for commit:
+        modified:   README.txt
+
+no changes added to commit
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (master)
+$ git add README.txt
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (master)
+$ git commit -m "fifth commit css"
+[master d4330c4] fifth commit css
+ Committer: temp <temp@DIN34003357.corp.capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 3 insertions(+)
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (master)
+$ ls
+index1.html  index2.html  README.txt
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (master)
+$ git remote add origin https://github.com/saranyaa2/GitAssign2.git
+
+DIN34003357+temp@DIN34003357 MINGW64 ~/Assignments (master)
+$ git push --force https://github.com/saranyaa2/GitAssign2.git
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (16/16), 1.66 KiB | 212.00 KiB/s, done.
+Total 16 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/saranyaa2/GitAssign2.git
+ * [new branch]      master -> master
